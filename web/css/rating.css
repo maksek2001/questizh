@@ -1,0 +1,119 @@
+.rating-container {
+    margin-top: 35px;
+}
+
+.rating-results {
+    width: 100%;
+    margin-top: 2.5rem;
+    height: fit-content;
+}
+
+.load {
+    min-height: 100px;
+    background: url(../../web/images/loading.gif);
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: center;
+}
+
+.results-table span {
+    background-color: #464646ba;
+    padding: 0.25rem 0;
+    display: block;
+    margin: 0 auto;
+    width: 75px;
+    border-radius: 0.375rem;
+}
+
+.results-table tr {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.medal {
+    display: inline-flex;
+    vertical-align: middle;
+    width: 45px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.table> :not(caption)>*>* {
+    padding: 0.75rem 0.95rem;
+}
+
+.medal-gold {
+    background-image: url(../../web/images/medals/gold-medal.png);
+}
+
+.medal-silver {
+    background-image: url(../../web/images/medals/silver-medal.png);
+}
+
+.medal-bronze {
+    background-image: url(../../web/images/medals/bronze-medal.png);
+}
+
+.help-links-block {
+    text-align: right;
+    display: block;
+    position: relative;
+    font-size: 1.05rem;
+}
+
+.current-position,
+.help .alert {
+    display: none;
+}
+
+.table {
+    box-shadow: 0 2px 31px rgb(255 255 255 / 40%);
+    animation: fadeIn .4s ease-in-out
+}
+
+.rating-results>.alert {
+    animation: fadeIn .4s ease-in-out
+}
+
+.current-team td,
+.current-team th {
+    --bs-table-accent-bg: #001d48 !important;
+    background-color: #001d48 !important;
+    border-top: 2px solid #0d6efd;
+    border-bottom: 2px solid #0d6efd;
+    color: #fff !important;
+    font-weight: 600;
+}
+
+.table-spacer td,
+.table-spacer th {
+    padding: 0.75rem 0.95rem 1.25rem;
+    font-weight: 600;
+}
+
+.current-position {
+    position: sticky;
+    background-color: #09e2009e;
+    color: #fff;
+    top: 85px;
+    width: fit-content;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+}
+
+@media only screen and (max-width:767px) {
+    .medal {
+        width: 33px;
+        height: 38px;
+    }
+
+    .table> :not(caption)>*>* {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .results-table span {
+        width: 65px;
+    }
+}

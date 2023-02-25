@@ -1,0 +1,192 @@
+.office-container {
+    display: flex;
+    margin-top: 35px;
+}
+
+.panel-info {
+    background-color: #fff;
+    box-shadow: 0 1px 10px rgb(255 255 255 / 17%);
+    padding: 1rem;
+    border-radius: 0.375rem;
+    margin: 10px;
+}
+
+.block-name {
+    font-size: 1.125rem;
+}
+
+.info-form {
+    padding-top: 0.5rem;
+}
+
+.icon-team {
+    width: 50px;
+    height: auto;
+    margin-bottom: 0;
+}
+
+.team-information,
+.team-results {
+    width: 50%;
+}
+
+.team-header {
+    color: #009d00;
+    display: flex;
+}
+
+.team-header .info {
+    padding: 1rem 1.25rem 0.5rem;
+}
+
+#team-name {
+    font-size: 1.5rem;
+}
+
+.results-header {
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5px solid #7a7a7a57;
+}
+
+.passing-result {
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 1px 5px #d5d5d559;
+    margin: 0.75rem 0;
+}
+
+.passing-result .quest-name {
+    font-size: 1.25em;
+    line-height: 2.15rem;
+    margin-bottom: 1rem;
+    color: #009d00;
+}
+
+.result-header {
+    border-bottom: 1px solid #e7e7e7;
+    padding-bottom: 0.5rem;
+}
+
+.passing-result .icon {
+    color: #009d00;
+    margin-bottom: -5px;
+}
+
+.status {
+    float: right;
+    cursor: pointer;
+    font-size: 13px;
+    user-select: text;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 8px 10px 6px;
+    overflow: hidden;
+    border-radius: 0.375rem;
+    text-overflow: ellipsis;
+    text-align: center;
+    line-height: 19px;
+}
+
+.status .icon-small {
+    width: 18px;
+    margin-bottom: -4.5px;
+    margin-left: 2px;
+}
+
+.status:hover::after {
+    font-size: 0.9rem;
+    content: attr(data-text);
+    position: absolute;
+    line-height: 1.5;
+    margin-top: 31px;
+    margin-left: -230px;
+    z-index: 2;
+    background: #333;
+    width: 230px;
+    color: #fff;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #333;
+    border-radius: 0.375rem;
+    animation: slideUp 0.4s forwards;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
+}
+
+.status.completed {
+    background-color: #009d00;
+    color: #fff;
+}
+
+.status.in_process {
+    background-color: #0020b1ea;
+    color: #fff;
+}
+
+.status.failed {
+    color: #fff;
+    background-color: #f70000ea;
+}
+
+.result-info .btn {
+    width: 100%;
+    max-width: 400px;
+}
+
+@media only screen and (max-width: 767px) {
+    .passing-result .quest-name {
+        line-height: 2.375rem;
+    }
+
+    .result-header {
+        padding-bottom: 0.675rem;
+    }
+
+    .status .icon-small {
+        margin-bottom: -4.75px;
+    }
+
+    .passing-result .icon {
+        width: 20px;
+        height: -5px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .office-container {
+        display: block;
+    }
+
+    .team-information,
+    .team-results {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .status {
+        display: block;
+        float: none;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .status.in_process:hover::after {
+        margin-left: -159px;
+    }
+
+    .status.failed:hover::after {
+        margin-left: -155.25px;
+    }
+
+    .status.completed:hover::after {
+        margin-left: -152.5px;
+    }
+
+    .passing-result .quest-name {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.25rem;
+    }
+}

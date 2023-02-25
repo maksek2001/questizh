@@ -1,0 +1,40 @@
+.help-container {
+    margin-top: 35px;
+    width: 100%;
+    color: #fff;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 10px rgb(255 255 255 / 17%);
+    padding: 1.5rem;
+    font-size: 1.025rem;
+}
+
+.info-block h6 {
+    font-size: 1.1em;
+    margin-bottom: 0.75rem;
+}
+
+.info-block img {
+    display: block;
+    width: 70%;
+    min-width: 500px;
+    margin: 1.25rem auto;
+    height: fit-content;
+    object-fit: contain;
+}
+
+.help-footer {
+    padding-top: 0.75rem;
+    border-top: 0.5px solid #4b4b4b;
+}
+
+@media only screen and (max-width: 550px) {
+    .help-container {
+        box-shadow: none;
+        padding: 0.5rem;
+    }
+
+    .info-block img {
+        min-width: initial;
+        width: 100%;
+    }
+}

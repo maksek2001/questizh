@@ -1,0 +1,185 @@
+.flag {
+    position: absolute;
+    width: 94px;
+    height: 29px;
+}
+
+.flag.flag-short {
+    width: 66px;
+}
+
+.flag.flag-long {
+    width: 130px;
+}
+
+.flag.flag-small {
+    height: 27px;
+    width: 88px;
+}
+
+.flag-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.flag.right .flag-image {
+    transform: rotate(180deg);
+}
+
+/* Красные флажки */
+
+.flag.flag-fill-red .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 86 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M84 25.5L74.5 13.25L84 1H1V25.5H84Z' fill='%23F44336' stroke='%23F44336'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag.flag-fill-white-red .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 86 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M84 25.5L74.5 13.25L84 1H1V25.5H84Z' fill='%23FFFFFF' stroke='%23F44336'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag.flag-border-red .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 86 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M84 25.5L74.5 13.25L84 1H1V25.5H84Z' fill='none' stroke='%23F44336'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag-short.flag-fill-red .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 57 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M55.5 1H1V25.5H55.5L45.5 13.25L55.5 1Z' fill='%23F44336' stroke='%23F44336'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag-short.flag-fill-white-red .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 57 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M55.5 1H1V25.5H55.5L45.5 13.25L55.5 1Z' fill='%23FFFFFF' stroke='%23F44336'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag-short.flag-border-red .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 57 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M55.5 1H1V25.5H55.5L45.5 13.25L55.5 1Z' fill='none' stroke='%23F44336'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag-long.flag-fill-red .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 116 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 25L114 25L104 12.75L114 0.5L1 0.5V25Z' fill='%23F44336' stroke='%23F44336'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag-long.flag-fill-white-red .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 116 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 25L114 25L104 12.75L114 0.5L1 0.5V25Z' fill='%23FFFFFF' stroke='%23F44336'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag-long.flag-border-red .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 116 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 25L114 25L104 12.75L114 0.5L1 0.5V25Z' fill='none' stroke='%23F44336'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+/* Зелёные флажки */
+
+.flag.flag-fill-green .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 86 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M84 25.5L74.5 13.25L84 1H1V25.5H84Z' fill='%2333ab00' stroke='%2333ab00'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag.flag-fill-white-green .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 86 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M84 25.5L74.5 13.25L84 1H1V25.5H84Z' fill='%23FFFFFF' stroke='%2333ab00'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag.flag-border-green .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 86 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M84 25.5L74.5 13.25L84 1H1V25.5H84Z' fill='none' stroke='%2333ab00'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag-short.flag-fill-green .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 57 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M55.5 1H1V25.5H55.5L45.5 13.25L55.5 1Z' fill='%2333ab00' stroke='%2333ab00'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag-short.flag-fill-white-green .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 57 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M55.5 1H1V25.5H55.5L45.5 13.25L55.5 1Z' fill='%23FFFFFF' stroke='%2333ab00'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag-short.flag-border-green .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 57 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M55.5 1H1V25.5H55.5L45.5 13.25L55.5 1Z' fill='none' stroke='%2333ab00'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag-long.flag-fill-green .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 116 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 25L114 25L104 12.75L114 0.5L1 0.5V25Z' fill='%2333ab00' stroke='%2333ab00'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag-long.flag-fill-white-green .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 116 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 25L114 25L104 12.75L114 0.5L1 0.5V25Z' fill='%23FFFFFF' stroke='%2333ab00'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag-long.flag-border-green .flag-image {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 116 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 25L114 25L104 12.75L114 0.5L1 0.5V25Z' fill='none' stroke='%2333ab00'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.flag-text {
+    position: absolute;
+    width: calc(100% - 12px);
+    text-align: center;
+    font-size: 15px;
+    line-height: 29px;
+    right: 11px;
+    padding: 0 0.5rem;
+    color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.flag-long .flag-text {
+    width: calc(100% - 14px);
+}
+
+.flag-short .flag-text {
+    width: calc(100% - 16px);
+    right: 15px;
+}
+
+.right .flag-text {
+    right: 0;
+}
+
+.flag-small .flag-text {
+    font-size: 13px;
+    line-height: 27px;
+}
+
+.flag-fill-white-red .flag-text,
+.flag-border-red .flag-text {
+    color: #f44336;
+}
+
+.flag-fill-white-green .flag-text,
+.flag-border-green .flag-text {
+    color: #33ab00;
+}
+
+@media only screen and (max-width: 767px) {
+    .flag {
+        width: 93px;
+    }
+
+    .flag.flag-short {
+        width: 61px;
+    }
+
+    .flag.flag-long {
+        width: 125px;
+    }
+
+    .flag-text {
+        font-size: 14px;
+    }
+}
