@@ -36,8 +36,7 @@ class SignupForm extends Model
             [['username', 'name', 'password', 'email'], 'required', 'message' => 'Обязательное поле!'],
             [['username', 'password', 'name'], 'string', 'length' => [1, 20], 'tooLong' => 'Слишком длинный', 'tooShort' => 'Слишком короткий'],
             ['email', 'email', 'message' => 'Некорректный E-mail'],
-            ['username', 'match', 'pattern' => '/^[a-z0-9-_|!|.|@|#|&]*$/i', 'message' => 'Введён недопустимый символ. Допустимые символы a-z 0-9 _'],
-            ['password', 'match', 'pattern' => '/^[a-z0-9-_|!|.|@|#|&]*$/i',  'message' => 'Введён недопустимый символ. Допустимые символы a-z 0-9 _ ! @ # &'],
+
             ['name', 'validateName'],
             ['email', 'validateEmail'],
             ['username', 'validateLogin']
