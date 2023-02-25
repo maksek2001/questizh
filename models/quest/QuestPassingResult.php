@@ -52,7 +52,7 @@ class QuestPassingResult extends \yii\db\ActiveRecord
                     teams.name team_name,
                     result.status,
                     TIMESTAMPDIFF(SECOND, result.start_datetime, result.end_datetime) spented_time
-                FROM quests_passing_results result
+                FROM quest_passing_results result
                 INNER JOIN teams
                     ON teams.id = result.team_id
                 WHERE result.quest_id = :questId AND result.status = :resultStatus AND result.in_rating = :inRating
@@ -79,7 +79,7 @@ class QuestPassingResult extends \yii\db\ActiveRecord
                     result.status,
                     TIMESTAMPDIFF(SECOND, result.start_datetime, result.end_datetime) spented_time,
                     ROW_NUMBER() OVER(ORDER BY spented_time ASC) position
-                FROM quests_passing_results result
+                FROM quest_passing_results result
                 INNER JOIN teams
                     ON teams.id = result.team_id
                 WHERE result.quest_id = :questId 
@@ -100,7 +100,7 @@ class QuestPassingResult extends \yii\db\ActiveRecord
     public static function findTeamResults(int $teamId): array
     {
         $sql = "SELECT quests.name quest_name, quests.max_time quest_max_time, results.*
-                FROM quests_passing_results results
+                FROM quest_passing_results results
                 INNER JOIN quests
                     ON results.quest_id = quests.id
                 WHERE results.team_id = :teamId";
