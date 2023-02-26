@@ -15,8 +15,6 @@ use yii\helpers\Url;
                         <li>Телефон: <a class="footer-link" href="tel:+7 (999) 888-77-66" target="_blank">+7 (999) 888–77–66</a></li>
                         <li>Email: <a title="Напишите нам" class="footer-link" href="mailto:questizh@gmail.com">questizh@gmail.com</a></li>
                         <li>Юридический&nbsp;адрес: 123456, Россия, Удмуртская республика, г.Ижевск, ул. Удмуртская, д.1, 1</li>
-                        <li><a title="Пользовательское соглашение" class="footer-link" href="/">Пользовательское соглашение</a></li>
-                        <li><a title="Политика конфиденциальности" class="footer-link" href="/">Политика конфиденциальности</a></li>
                     </ul>
                 </div>
             </div>
@@ -25,6 +23,8 @@ use yii\helpers\Url;
                     <h4 class="heading footer-title text-uppercase">Пользователям</h4>
                     <ul class="footer-links info">
                         <li><a href="<?= Url::toRoute('help/quest') ?>">Как начать прохождение квеста</a></li>
+                        <li><a title="Пользовательское соглашение" class="footer-link" href="/">Пользовательское соглашение</a></li>
+                        <li><a title="Политика конфиденциальности" class="footer-link" href="/">Политика конфиденциальности</a></li>
                     </ul>
                 </div>
             </div>
