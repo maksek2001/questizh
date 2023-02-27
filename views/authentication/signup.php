@@ -7,7 +7,7 @@ use app\widgets\Alert;
 $this->title = 'Регистрация';
 ?>
 
-<div class="form-block text-center">
+<div class="form-block">
     <h3><?= Html::encode($this->title) ?></h3>
 
     <p>Пожалуйста, заполните поля для регистрации</p>

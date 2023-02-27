@@ -80,6 +80,7 @@ main>.container-fluid {
 }
 
 .header .nav-item {
+    width: fit-content;
     text-transform: uppercase;
     font-size: 1rem;
 }
@@ -289,7 +290,8 @@ main>.container-fluid {
 .form-block {
     margin: 40px auto;
     padding: 2rem;
-    width: 50%;
+    width: 100%;
+    max-width: 550px;
     color: #000000;
     background-color: #ffffff;
     box-shadow: 0 1px 6px rgb(98 98 98 / 26%);
@@ -628,10 +630,6 @@ svg {
 
     .logo {
         width: 45px;
-    }
-
-    .form-block {
-        width: 100%;
     }
 
     .header {

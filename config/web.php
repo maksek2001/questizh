@@ -6,7 +6,7 @@ $db = require __DIR__ . '/db.php';
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
-    'language' => 'ru-RU',
+    'language' => 'ru_RU',
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -28,6 +28,9 @@ $config = [
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
+        ],
+        'inflection' => [
+            'class' => 'wapmorgan\yii2inflection\Inflection'
         ],
         'user' => [
             'identityClass' => 'app\models\Team',

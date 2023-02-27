@@ -72,16 +72,10 @@ $this->title = Yii::$app->name;
                         </svg>
 
                         <?php if ($quest->min_count_of_persons == $quest->max_count_of_persons) : ?>
-                            <?= Html::encode($quest->max_count_of_persons) ?>
+                            <?= Yii::$app->inflection->pluralize($quest->max_count_of_persons, 'человек') ?>
                         <?php else : ?>
-                            <?= Html::encode($quest->min_count_of_persons) ?>-<?= Html::encode($quest->max_count_of_persons) ?>
+                            <?= Html::encode($quest->min_count_of_persons) ?> - <?= Yii::$app->inflection->pluralize($quest->max_count_of_persons, 'человек') ?>
                         <?php endif; ?>
-
-                        <?php echo Yii::$app->i18n->messageFormatter->format(
-                            '{n, plural, one{человек} few{человека} many{человек} other{человека}}',
-                            ['n' => $quest->max_count_of_persons],
-                            Yii::$app->language
-                        ); ?>
 
                         <?php if ($quest->status == Quest::STATUS_ACTIVE) : ?>
                             <div class="quest-submit-wrap">

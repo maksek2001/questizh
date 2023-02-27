@@ -1,7 +1,5 @@
 <?php
 
-use yii\helpers\Url;
-
 $this->title = Yii::$app->name;
 ?>
 
@@ -10,7 +8,7 @@ $this->title = Yii::$app->name;
     <p>
         Для того, чтобы начать прохождение квеста, вы должны зарегистрироваться и авторизоваться. <br>
         Для регистрации вам необходимо нажать на ссылку "ВХОД", после чего вы перейдёте на форму авторизации.<br>
-        <a target="_blank" href="/web/images/help/quest-1.jpg">
+        <a target="_blank" href="web/images/help/quest-1.jpg">
             <img src="/web/images/help/quest-1.jpg" />
         </a>
         <a target=" _blank" href="/web/images/help/quest-2.jpg">
