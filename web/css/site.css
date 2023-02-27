@@ -292,6 +292,7 @@ main>.container-fluid {
     padding: 2rem;
     width: 100%;
     max-width: 550px;
+    text-align: center;
     color: #000000;
     background-color: #ffffff;
     box-shadow: 0 1px 6px rgb(98 98 98 / 26%);
