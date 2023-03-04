@@ -179,6 +179,7 @@ class QuestController extends SiteController
 
             $currentResult->team_id = Yii::$app->user->id;
             $currentResult->quest_id = $id;
+            $currentResult->start_datetime = date(QuestPassingResult::DATETIME_DB_FORMAT);
             $currentResult->status = QuestPassingResult::STATUS_IN_PROCESS;
             $currentResult->last_completed_task_number = 0;
             $currentResult->in_rating = false;
