@@ -31,10 +31,8 @@ class RatingController extends SiteController
         ]);
     }
 
-    public function actionLoadRating()
+    public function actionLoadRating($questId)
     {
-        $questId = Yii::$app->request->get('quest_id');
-
         $results = QuestPassingResult::findRatingResults($questId, $this->teamsCountLimit);
 
         /** @var RatingResult[] */

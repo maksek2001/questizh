@@ -69,7 +69,7 @@ $this->title = Yii::$app->name . ': квест "' . $quest->name . '"';
                 <?php endif; ?>
             <?php else : ?>
                 <?php if ($isGuest) : ?>
-                    <a class="btn btn-success" href="<?= Url::toRoute(['authentication/login', 'quest_id' => $quest->id]) ?>">
+                    <a class="btn btn-success" href="<?= Url::toRoute(['authentication/login']) ?>">
                         Авторизоваться
                     </a>
                 <?php else : ?>

@@ -32,7 +32,7 @@ function getQuestPassingInfo(questPassingInfo) {
     $.ajax({
         url: "get-quest-passing-info",
         type: 'GET',
-        data: { 'quest_id': questPassingInfo.questId },
+        data: { 'id': questPassingInfo.questId },
         success: function (result) {
             // перевод в миллисекунды для удобства дальнейшего использования
             questPassingInfo.submitTimeout = result.submitTimeout * 1000;
@@ -101,13 +101,13 @@ function timer(questPassingInfo) {
     $.ajax({
         url: "timer",
         type: 'GET',
-        data: { 'quest_id': questPassingInfo.questId },
+        data: { 'id': questPassingInfo.questId },
         cache: false,
         success: function (result) {
             if (result.remainingTime > 0) {
                 $("#timer").html('Оставшееся время: ' + secondsToTimeString(result.remainingTime));
             } else {
-                window.location = `result?quest_id=${questPassingInfo.questId}`;
+                window.location = `result?id=${questPassingInfo.questId}`;
             }
         }
     });

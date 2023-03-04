@@ -11,7 +11,7 @@ function loadRating(questId, pageElement) {
         $.ajax({
             url: "load-rating",
             type: 'GET',
-            data: { 'quest_id': questId },
+            data: { 'questId': questId },
             dataType: 'html',
             success: function (result) {
                 pageElement.removeClass('load');

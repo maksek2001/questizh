@@ -291,6 +291,7 @@ main>.container-fluid {
     margin: 40px auto;
     padding: 2rem;
     width: 100%;
+    height: fit-content;
     max-width: 550px;
     text-align: center;
     color: #000000;
@@ -574,6 +575,7 @@ svg {
     font-size: 0.9rem;
     content: attr(data-text);
     position: absolute;
+    text-align: justify;
     line-height: 1.5;
     margin-top: 31px;
     margin-left: -230px;

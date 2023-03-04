@@ -63,6 +63,7 @@ class QuestController extends SiteController
 
             $currentResult->team_id = Yii::$app->user->id;
             $currentResult->quest_id = $id;
+            $currentResult->start_datetime = date(QuestPassingResult::DATETIME_DB_FORMAT);
             $currentResult->status = QuestPassingResult::STATUS_IN_PROCESS;
             $currentResult->last_completed_task_number = 0;
             $currentResult->in_rating = true;
@@ -236,7 +237,7 @@ class QuestController extends SiteController
             $canSubmit = true;
 
             $quest = Quest::findOne($model->questId);
-            $lastSubmitDateTime = Yii::$app->session->get('last_submit_datetime');
+            $lastSubmitDateTime = Yii::$app->session->get('lastSubmitDatetime');
             $now = new DateTime('now', $this->_dateTimeZone);
 
             if ($lastSubmitDateTime != null) {
@@ -258,7 +259,7 @@ class QuestController extends SiteController
                     'message' => 'Абсолютно верно'
                 ];
 
-            Yii::$app->session->set('last_submit_datetime', $now);
+            Yii::$app->session->set('lastSubmitDatetime', $now);
 
             return [
                 'success' => false,
@@ -273,13 +274,14 @@ class QuestController extends SiteController
         $currentResult = QuestPassingResult::findOne(['team_id' => Yii::$app->user->id, 'quest_id' => $id]);
 
         $startDateTime = new DateTime($currentResult->start_datetime, $this->_dateTimeZone);
-        $endDateTime = $startDateTime->modify('+ ' . $quest->max_time . ' minutes');
+        $endDateTime = $startDateTime->modify("+ $quest->max_time minutes");
+
         $now = new DateTime('now', $this->_dateTimeZone);
 
         Yii::$app->response->format = Response::FORMAT_JSON;
 
         return [
-            'remainingTime' =>  $endDateTime->getTimestamp() - $now->getTimestamp()
+            'remainingTime' => $endDateTime->getTimestamp() - $now->getTimestamp()
         ];
     }
 
