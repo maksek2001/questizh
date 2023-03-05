@@ -43,7 +43,7 @@ $this->title = Yii::$app->name;
                     <?php if ($quest->status == Quest::STATUS_ACTIVE) : ?>
                         <a href="<?= Url::toRoute(['quest/index', 'id' => $quest->id]) ?>">
                             <div class="quest-head">
-                                <img src="../web/images/quests/<?= $quest->filename ?>" />
+                                <img src="../web/images/quests/<?= Html::encode($quest->filename) ?>" />
                                 <div class="short-info">
                                     <?= Html::encode($quest->short_description) ?>
                                 </div>
@@ -51,7 +51,7 @@ $this->title = Yii::$app->name;
                         </a>
                     <?php else : ?>
                         <div class="quest-head">
-                            <img src="../web/images/quests/<?= $quest->filename ?>" />
+                            <img src="../web/images/quests/<?= Html::encode($quest->filename) ?>" />
                             <div class="short-info">
                                 <?= Html::encode($quest->short_description) ?>
                             </div>

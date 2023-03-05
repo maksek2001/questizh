@@ -8,7 +8,7 @@ $this->title = Yii::$app->name . ': квест "' . $quest->name . '"';
 ?>
 
 <div class="quest-start">
-    <img class="quest-image" src="../web/images/quests/<?= $quest->filename ?>" />
+    <img class="quest-image" src="../web/images/quests/<?= Html::encode($quest->filename) ?>" />
     <div class="quest-info">
         <h4><?= Html::encode($quest->name) ?></h4>
 

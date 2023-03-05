@@ -1,6 +1,7 @@
 <?php
 
 use app\models\quest\QuestPassingResult;
+use yii\helpers\Html;
 
 const POSITIONS_MEDALS = [
     1 => 'gold',
@@ -13,7 +14,7 @@ const POSITIONS_MEDALS = [
 <?php if ($rating) : ?>
     <?php if ($currentTeamPosition) : ?>
         <div class="current-position">
-            Ваше место: <?= $currentTeamPosition ?>
+            Ваше место: <?= Html::encode($currentTeamPosition) ?>
         </div>
     <?php endif; ?>
     <div class="help-links-block mb-2 p-1">
@@ -55,15 +56,15 @@ const POSITIONS_MEDALS = [
                     <th scope="row">
                         <em class="medal medal-<?= POSITIONS_MEDALS[$rating[$i]->position] ?>"></em>
                     </th>
-                    <td><?= $rating[$i]->teamName ?></td>
-                    <td><?= $rating[$i]->spentedTime ?></td>
+                    <td><?= Html::encode($rating[$i]->teamName) ?></td>
+                    <td><?= Html::encode($rating[$i]->spentedTime) ?></td>
                 </tr>
             <?php endfor; ?>
             <?php for ($i = 3; $i < count($rating); $i++) : ?>
                 <tr class="<?= ($rating[$i]->position == $currentTeamPosition) ? 'current-team' : '' ?>">
-                    <th scope="row"><span><?= $rating[$i]->position ?></span></th>
-                    <td><?= $rating[$i]->teamName ?></td>
-                    <td><?= $rating[$i]->spentedTime ?></td>
+                    <th scope="row"><span><?= Html::encode($rating[$i]->position) ?></span></th>
+                    <td><?= Html::encode($rating[$i]->teamName) ?></td>
+                    <td><?= Html::encode($rating[$i]->spentedTime) ?></td>
                 </tr>
             <?php endfor; ?>
             <?php if ($currentTeamPosition > count($rating)) : ?>
@@ -73,9 +74,9 @@ const POSITIONS_MEDALS = [
                     <td>...</td>
                 </tr>
                 <tr class="current-team out-of-rating">
-                    <th scope="row"><span><?= $currentTeamRatingResult->position ?></span></th>
-                    <td><?= $currentTeamRatingResult->teamName ?></td>
-                    <td><?= $currentTeamRatingResult->spentedTime ?></td>
+                    <th scope="row"><span><?= Html::encode($currentTeamRatingResult->position) ?></span></th>
+                    <td><?= Html::encode($currentTeamRatingResult->teamName) ?></td>
+                    <td><?= Html::encode($currentTeamRatingResult->spentedTime) ?></td>
                 </tr>
             <?php endif; ?>
         </tbody>

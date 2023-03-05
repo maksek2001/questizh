@@ -29,11 +29,11 @@ AuthenticationAsset::register($this);
     <main role="main" class="flex-shrink-0">
         <div class="container-fluid main-container">
             <div class="authentication-subheader">
-                <?= Html::a('РЕГИСТРАЦИЯ', 'signup', [
+                <?= Html::a('Регистрация', 'signup', [
                     'class' => (Yii::$app->controller->action->id == 'signup') ? 'active' : ''
                 ]) ?>
                 &nbsp; / &nbsp;
-                <?= Html::a('АВТОРИЗАЦИЯ', 'login', [
+                <?= Html::a('Авторизация', 'login', [
                     'class' => (Yii::$app->controller->action->id == 'login') ? 'active' : ''
                 ]) ?>
             </div>

@@ -8,7 +8,7 @@ $this->title = Yii::$app->name;
 ?>
 
 <div class="quest-result">
-    <img class="result-image" src="../web/images/quests/<?= $quest->filename ?>" />
+    <img class="result-image" src="../web/images/quests/<?= Html::encode($quest->filename) ?>" />
     <div class="result-info">
         <?php if ($result->status == QuestPassingResult::STATUS_COMPLETED) : ?>
             <h5 class="success">

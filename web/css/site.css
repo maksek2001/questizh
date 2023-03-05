@@ -280,6 +280,10 @@ main>.container-fluid {
     width: fit-content;
 }
 
+.authentication-subheader a {
+    text-transform: uppercase;
+}
+
 .authentication-subheader a.active {
     color: #f65b00;
     padding-bottom: 2px;
@@ -627,7 +631,9 @@ svg {
 }
 
 @media only screen and (max-width:767px) {
-    body, html {
+
+    body,
+    html {
         font-size: var(--text-size-mobile);
     }
 
