@@ -45,7 +45,7 @@ $this->title = Yii::$app->name;
             <div id="hints-block" class="hints-block">
                 <?php if ($visibleHints) : ?>
                     <?php foreach ($visibleHints as $visibleHint) : ?>
-                        <?= $this->render('hint.php', ['hint' => $visibleHint]); ?>
+                        <?= $this->render('hint.php', ['hint' => $visibleHint]) ?>
                     <?php endforeach ?>
                 <?php endif; ?>
             </div>

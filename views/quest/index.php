@@ -30,11 +30,11 @@ $this->title = Yii::$app->name . ': квест "' . $quest->name . '"';
                 <?php else : ?>
                     <?= Html::encode($quest->min_count_of_persons) ?>-<?= Html::encode($quest->max_count_of_persons) ?>
                 <?php endif; ?>
-                <?php echo Yii::$app->i18n->messageFormatter->format(
+                <?= Yii::$app->i18n->messageFormatter->format(
                     '{n, plural, one{человек} few{человека} many{человек} other{человека}}',
                     ['n' => $quest->max_count_of_persons],
                     Yii::$app->language
-                ); ?>
+                ) ?>
             </p>
             <p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-stopwatch" viewBox="0 0 16 16">

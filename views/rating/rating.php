@@ -54,7 +54,7 @@ const POSITIONS_MEDALS = [
             <?php for ($i = 0; $i < count($rating) && $i < 3; $i++) : ?>
                 <tr class="<?= ($rating[$i]->position == $currentTeamPosition) ? 'current-team' : '' ?>">
                     <th scope="row">
-                        <em class="medal medal-<?= POSITIONS_MEDALS[$rating[$i]->position] ?>"></em>
+                        <em class="medal medal-<?= Html::encode(POSITIONS_MEDALS[$rating[$i]->position]) ?>"></em>
                     </th>
                     <td><?= Html::encode($rating[$i]->teamName) ?></td>
                     <td><?= Html::encode($rating[$i]->spentedTime) ?></td>

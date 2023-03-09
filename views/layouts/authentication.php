@@ -15,8 +15,8 @@ AuthenticationAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php $this->registerCsrfMetaTags() ?>
-    <?= $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/svg+xml', 'href' => '/web/favicon.svg']); ?>
-    <?= $this->registerLinkTag(['rel' => 'shortcut icon', 'type' => 'image/svg+xml', 'href' => '/web/favicon.svg']); ?>
+    <?= $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/svg+xml', 'href' => '/web/favicon.svg']) ?>
+    <?= $this->registerLinkTag(['rel' => 'shortcut icon', 'type' => 'image/svg+xml', 'href' => '/web/favicon.svg']) ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
@@ -24,7 +24,7 @@ AuthenticationAsset::register($this);
 <body class="d-flex flex-column h-100">
     <?php $this->beginBody() ?>
 
-    <?= $this->render('common/header.php'); ?>
+    <?= $this->render('common/header.php') ?>
 
     <main role="main" class="flex-shrink-0">
         <div class="container-fluid main-container">
@@ -42,7 +42,7 @@ AuthenticationAsset::register($this);
         </div>
     </main>
 
-    <?= $this->render('common/footer.php'); ?>
+    <?= $this->render('common/footer.php') ?>
 
     <?php $this->endBody() ?>
 </body>
